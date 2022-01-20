@@ -1,0 +1,41 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+::root {
+  font-size: 18px;
+}
+
+input,
+button,
+label,
+::placeholder {
+  font: inherit;
+}
+input {
+  display: block;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+}

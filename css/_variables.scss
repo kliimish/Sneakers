@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,800;0,900;1,600&display=swap");
+$roboto: "Roboto Condensed", sans-serif;
+$poppins: "Poppins", sans-serif;
+
+$dark_gradient: hsla(205, 46%, 10%, 1);
+$yellow: #eaa702;
+$dirty_white: #e5e5e5;
+$black: #0e1c26;
+$blue_dark: #2a454b;
+$blue: 294861;
+
+.btn {
+  align-self: center;
+  min-width: 150px;
+  width: 20%;
+  min-height: 50px;
+  flex: 0 0 50px;
+  background: $yellow;
+  color: $dirty_white;
+  font-family: $roboto;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  cursor: pointer;
+
+  &:hover {
+    background: lighten($yellow, 20%);
+    color: $dark_gradient;
+  }
+}
