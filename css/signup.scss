@@ -1,6 +1,9 @@
 @import "_variables";
 @import "defaults";
 
+body {
+  animation: blur 2s forwards;
+}
 .main-container {
   display: grid;
   grid-template-columns: 3fr 2fr;
@@ -21,6 +24,7 @@
   color: white;
   display: grid;
   grid-template-rows: minmax(6, 1fr);
+
   & label {
     font-family: $roboto;
     font-size: 16px;
@@ -74,4 +78,18 @@
 
 .error {
   color: red;
+  max-width: 18ch;
+  font-family: $roboto;
+}
+input::placeholder {
+  color: red;
+}
+@keyframes blur {
+  from {
+    filter: blur(1.5rem);
+  }
+
+  to {
+    filter: blur(0);
+  }
 }

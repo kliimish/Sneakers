@@ -91,6 +91,11 @@ input {
   outline: none;
 }
 
+body {
+  -webkit-animation: blur 2s forwards;
+          animation: blur 2s forwards;
+}
+
 .main-container {
   display: -ms-grid;
   display: grid;
@@ -192,5 +197,45 @@ input {
 
 .error {
   color: red;
+  max-width: 18ch;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+input::-webkit-input-placeholder {
+  color: red;
+}
+
+input:-ms-input-placeholder {
+  color: red;
+}
+
+input::-ms-input-placeholder {
+  color: red;
+}
+
+input::placeholder {
+  color: red;
+}
+
+@-webkit-keyframes blur {
+  from {
+    -webkit-filter: blur(1.5rem);
+            filter: blur(1.5rem);
+  }
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+}
+
+@keyframes blur {
+  from {
+    -webkit-filter: blur(1.5rem);
+            filter: blur(1.5rem);
+  }
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
 }
 /*# sourceMappingURL=signup.css.map */
