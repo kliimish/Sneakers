@@ -1,0 +1,265 @@
+@import "_mixins";
+@import "_variables";
+@import "_defaults";
+@import "_section";
+@import "_grid";
+@import "_cards";
+
+body {
+  background: $lioght_gradient;
+}
+.top {
+  width: 100%;
+  background: $lioght_gradient;
+  display: flex;
+  flex-wrap: wrap;
+  opacity: 0.9;
+}
+.wrap {
+  grid-column: 1/2;
+  grid-row: 1;
+  display: flex;
+  justify-self: center;
+  & img {
+    width: 5rem;
+    transform: rotate(-35deg);
+  }
+
+  & h1 {
+    padding: 0 0 0 1rem;
+    font-size: clamp(2rem, 2.5rem, 3.25rem);
+    margin-top: 2.5rem;
+    font-family: $poppins;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    color: $dark_gradient;
+  }
+  & h1::after {
+    padding: 0 0 0 0.5rem;
+    display: block;
+    content: " Probabbly the best out there";
+    font-size: 0.8rem;
+    font-family: $roboto;
+    text-decoration: underline;
+    margin: 0;
+
+    color: lighten($dark_gradient, 15%);
+  }
+}
+.soc {
+  width: 100%;
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: row;
+
+  & .box {
+    flex: 1 0 auto;
+    background: $dark_gradient;
+    text-align: center;
+    padding: 1.5em;
+    margin: 1rem 0.2rem 1rem 0;
+    font-size: 28px;
+    border-radius: 5px;
+
+    & i {
+      color: $yellow;
+      &:hover {
+        transform: scale(1.2);
+        color: white;
+      }
+    }
+  }
+}
+.nav {
+  width: 100%;
+  background: $dark_gradient;
+  opacity: 0.9;
+}
+.nav-bar {
+  position: relative;
+  left: 8%;
+  width: 80%;
+  display: flex;
+
+  & a:nth-child(1),
+  a:nth-child(2),
+  a:nth-child(3),
+  a:nth-child(4) {
+    padding: 1.25rem 0 1.25rem 1.25rem;
+    color: $yellow;
+    font-family: $roboto;
+    flex: 1 0 auto;
+    max-width: 10em;
+    border-left: 5px solid white;
+    &:hover {
+      color: $dark_gradient;
+      background-color: $yellow;
+    }
+  }
+}
+.logged-in {
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+
+  & a:nth-child(2),
+  & a:nth-child(3) {
+    border: none;
+    padding: 1.25rem 0 0 1rem;
+  }
+}
+.menu {
+  display: none;
+  padding: 1.25rem 0 0 1rem;
+  color: $yellow;
+  font-size: 20px;
+}
+@include respond(mobile) {
+  .nav-bar {
+    display: block;
+  }
+  .nav-bar a {
+    display: none;
+  }
+  .logged-in {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+}
+
+.avatar {
+  position: absolute;
+  top: -60%;
+  right: 40%;
+  bottom: 10%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: url("../images/christopher-campbell-rDEOVtE7vOs-unsplash.jpg"),
+    white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.main--main--container {
+  background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 1fr 2fr 2fr;
+  grid-template-rows: 0.5fr repeat(4, minmax(10em, 0.5fr));
+}
+
+.color-bg {
+  position: relative;
+  height: 100%;
+  width: 55%;
+  background: $dark_gradient;
+  opacity: 0.9;
+  z-index: 0;
+  border-radius: 5px;
+  margin: 0;
+}
+.bg-pic {
+  position: relative;
+  left: 20%;
+  top: 30%;
+  width: 150%;
+  height: 50%;
+  background: url("../images/nicholas-kampouris-ZIW_wcbjKLw-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  z-index: 1;
+}
+.about-text {
+  width: 100%;
+  align-self: center;
+  & h2 {
+    text-align: center;
+    font-family: $poppins;
+    font-size: 2.75rem;
+    color: $yellow;
+    text-decoration: underline;
+  }
+  & p {
+    max-width: 60ch;
+    margin: auto;
+    line-height: 1.5;
+    font-family: $roboto;
+    padding: 0 0 1.5rem 0;
+    margin-bottom: 1rem;
+    justify-self: center;
+    text-align: center;
+  }
+}
+.dec-element1 {
+  position: absolute;
+  bottom: 5%;
+  right: 15%;
+  width: 120px;
+  height: 120px;
+  background: $yellow;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.dec-element2 {
+  position: relative;
+  top: 5%;
+  left: 5%;
+  width: 140px;
+  height: 140px;
+  background: $yellow;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+.dec-element3 {
+  position: relative;
+  left: 15%;
+  width: 60px;
+  height: 60px;
+  background: $yellow;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+.explore {
+  position: relative;
+  left: 40%;
+  font-family: $poppins;
+  font-weight: 700;
+  color: $dark_gradient;
+  background-color: $yellow;
+  padding: 0.8em;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  &:hover {
+    color: white;
+    background-color: lighten($yellow, 10%);
+  }
+}
+
+.resp {
+  position: relative;
+  display: block;
+  z-index: 2;
+  & a {
+    display: block;
+    padding: 1.25rem 0 1.25rem 1.25rem;
+    color: $yellow;
+    font-family: $roboto;
+    flex: 1 0 auto;
+    max-width: 10em;
+    border-left: 5px solid white;
+    &:hover {
+      color: $dark_gradient;
+      background-color: $yellow;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import "_grid";
+@import "_variables";
+@import "_mixins";
+.section--women {
+  border-left: 10px solid $yellow;
+  height: auto;
+}
+.section--men {
+  border-right: 10px solid $dark_gradient;
+  height: auto;
+}
+.w {
+  color: $dark_gradient;
+  & i {
+    color: $yellow;
+  }
+}
+.m {
+  color: $yellow;
+  & i {
+    color: $dark_gradient;
+  }
+}
+
+.section--heading {
+  margin: 0.2rem;
+  padding: 1rem;
+  display: inline-block;
+  position: relative;
+  font-size: 3rem;
+  bottom: 1%;
+  text-align: center;
+  font-family: $poppins;
+}

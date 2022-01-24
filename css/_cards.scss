@@ -1,0 +1,50 @@
+@import "_variables";
+
+.card {
+  width: 100%;
+  min-height: 15.8rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  & h3 {
+    font-family: $poppins;
+    font-weight: 300;
+    color: darken($yellow, 20%);
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+  }
+}
+.card-img {
+  display: flex;
+  justify-content: center;
+  & img {
+    display: block;
+    width: 200px;
+    border-radius: 5px;
+  }
+}
+
+.card-add-toCart {
+  display: none;
+  width: 50%;
+  margin: auto;
+  justify-content: center;
+  align-content: center;
+
+  & i {
+    margin: 0.2rem;
+    padding: 0.4rem;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    color: gray;
+  }
+
+  & input {
+    margin: 0.2rem;
+    max-width: 2rem;
+    border-radius: 5px;
+  }
+  & label {
+    font-family: $roboto;
+    padding: 0.5rem;
+  }
+}

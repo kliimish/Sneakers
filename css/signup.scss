@@ -43,7 +43,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 .heading {
   font-size: 3.5rem;
@@ -64,6 +64,7 @@ body {
 .wrap {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 
   & input {
     width: 20px;
@@ -78,8 +79,13 @@ body {
 
 .error {
   color: red;
-  max-width: 18ch;
   font-family: $roboto;
+  animation: dimIn 2s forwards;
+  flex: 1 0 100%;
+}
+small {
+  margin: 0.2rem 0 0 0;
+  padding: 0.2rem;
 }
 input::placeholder {
   color: red;
@@ -91,5 +97,14 @@ input::placeholder {
 
   to {
     filter: blur(0);
+  }
+}
+
+@keyframes dimIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

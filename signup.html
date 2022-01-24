@@ -11,35 +11,42 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/signup.css" />
-    <script defer src="js/signup.js"></script>
+    <script defer type="module" src="js/signup.js"></script>
     <title>Sneakers Inc.</title>
     <main class="main-container">
         <div class="side-pic"></div>
-        <form class="form"action="" id="form">
+        <form class="form" method="POST" action="localhost:3000/signup" id="form">
             <ul class="flex">
                 <li><h1 class="heading">SNEAKERS.</h1></li>
                 <li><h4>Sign Up</h4></li>
                 <li><label for="name">Name</label>
-                   <input id="name" class="input" type="text" >
+                   <input name="Name" class="input" type="text" >
+                   <small id="Name"></small>
                   </li>
                 <li><label for="lastname">Lastname</label> 
-                  <input id="lastname" class="input" type="text" >
+                  <input  name="LastName" class="input" type="text" >
+                  <small id="LastName"></small>
                 </li>
                 <li><label for="email">Email</label> 
-                  <input id="email" class="input" type="text">
+                  <input name = "Email" class="input" type="text">
+                  <small id ="Email"></small>
                 </li>
                 <li><label for="password">Password</label> 
-                  <input id="pass1" class="input" type="password">
+                  <input name="pass1"  class="input" type="password">
+                  <small id="pass1"></small>
                 </li>
                 <li><label for="password2">Repeat password:</label> 
-                  <input id="pass2" class="input" type="password">
+                  <input name="pass2" class="input" type="password">
+
                 </li>
                 
                 <div class="wrap">
-                    <input id="checkbox" type="checkbox"><label for="checkbox">I accept terms and conditions</label>
+                    <input  name="checkBox" type="checkBox"><label for="checkbox">I accept terms and conditions</label>
+                    <br>
+                    <small id="checkBox"></small>
                 </div>
               
-                <li><input id="submit" class="btn" type="submit" name ="Submit"></li>
+                <li><button id="submit" class="btn">Sign Up</button></li>
              
             </ul>
         </form>
